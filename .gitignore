@@ -1,0 +1,6 @@
+kubeconfig
+*.key
+*.crt
+*.csr
+*kubeconfig
+*-kubeconfig
