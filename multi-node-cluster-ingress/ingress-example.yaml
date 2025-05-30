@@ -58,9 +58,7 @@ metadata:
   name: example-ingress
 spec:
   rules:
-
-  - host: samit.net
-    http:
+  - http:
       paths:
       - pathType: Prefix
         path: /foo
