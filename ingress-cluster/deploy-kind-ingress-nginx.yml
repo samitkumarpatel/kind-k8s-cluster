@@ -506,6 +506,10 @@ spec:
       dnsPolicy: ClusterFirst
       nodeSelector:
         kubernetes.io/hostname: "kind-control-plane"
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
       serviceAccountName: ingress-nginx
       terminationGracePeriodSeconds: 0
       tolerations:
@@ -569,6 +573,10 @@ spec:
             type: RuntimeDefault
       nodeSelector:
         kubernetes.io/hostname: "kind-control-plane"
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
       restartPolicy: OnFailure
       serviceAccountName: ingress-nginx-admission
 ---
@@ -623,6 +631,10 @@ spec:
             type: RuntimeDefault
       nodeSelector:
         kubernetes.io/hostname: "kind-control-plane"
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
       restartPolicy: OnFailure
       serviceAccountName: ingress-nginx-admission
 ---
