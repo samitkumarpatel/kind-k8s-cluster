@@ -58,7 +58,6 @@ metadata:
   name: foo-bar-ingress
 spec:
   rules:
-
   - host: example.net
     http:
       paths:
