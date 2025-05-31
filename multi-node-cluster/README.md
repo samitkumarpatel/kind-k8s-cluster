@@ -12,6 +12,9 @@ kind create cluster --config=$(pwd)/cluster.yml --kubeconfig=$(pwd)/kubeconfig
 k --kubeconfig=$(pwd)/kubeconfig apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.8/config/manifests/metallb-native.yaml
 
 k --kubeconfig=$(pwd)/kubeconfig -n metallb-system get pods
+
+# Define LoadBalancer ip pool
+k --kubeconfig=$(pwd)/kubeconfig apply -f metallb-ipaddress-pool.yml
 ```
 **Test the LoadBalancer capability**
 
