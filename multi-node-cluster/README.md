@@ -39,3 +39,5 @@ k --kubeconfig=$(pwd)/kubeconfig wait --namespace ingress-nginx \
   --selector=app.kubernetes.io/component=controller \
   --timeout=120s
 ```
+
+[more details on metallb for kind](https://medium.com/@tylerauerbeck/metallb-and-kind-loads-balanced-locally-1992d60111d8).
