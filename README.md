@@ -6,7 +6,7 @@ Build a Kubernetes playground on demand to test any kubernetes workload / Operat
 
 ### Install / Create a Cluster
 
-> Make sure , You have `kind` command line tool Installed.
+> Make su re , You have `kind` command line tool Installed.
 
 ```sh
 kind create cluster --kubeconfig $(pwd)/kubeconfig --name kind-playground
@@ -47,3 +47,6 @@ kubectl --kubeconfig kubeconfig get nodes #will fail
 
 kubectl --kubeconfig kubeconfig get nodes #will work
 ```
+### LoadBaalncer - metal lb
+
+[metal lb reference](https://medium.com/@tylerauerbeck/metallb-and-kind-loads-balanced-locally-1992d60111d8).
