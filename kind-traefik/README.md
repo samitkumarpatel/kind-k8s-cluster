@@ -54,7 +54,7 @@ curl -sv --resolve dashboard.localhost:80:172.18.255.2 http://dashboard.localhos
 ```
 
 
-### Test IngressRoute and HTTPRoute
+### Test IngressRoute and HTTPRoute CRD for a whoami service.
 
 ```sh
 cat <<EOF | kubectl apply --kubeconfig kubeconfig -f -
